@@ -103,16 +103,24 @@ input, select {
 
 
 /* This is my text below */
-
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+body {
+    background-color: #F3F3F3;
+}
 h1 {color: #111111;
 font-size: 48px;
 font-family: 'JetBrains Mono', monospace;
 font-weight: medium;
 }
 p {color: #111111;
-font-family: 'JetBrains Mono', monospace;
-font-weight: regular;
+font-family: 'Space Grotesk', sans-serif;
 font-size: 24px;
+padding: 16px;
+margin: 0;
 }
 
 .nav {
@@ -129,11 +137,25 @@ padding: 1%
     width: 73%;
     padding: 1%;
 }
-.links ul {
-   width: 50%;
-   margin-left: 0; 
-   font-family: jetBrains mono;
+
+ul{
+
 }
+
+ul li {
+    list-style: none;
+    width: 50%;
+    font-family: 'JetBrains Mono', monospace;
+}
+ul li a {
+display: block;
+text-decoration: none;
+font-size: 24px;
+color: #111111;
+padding: 0 32px;
+cursor: pointer;
+}
+
 .logo {
     text-align: center;
 }
@@ -148,10 +170,14 @@ padding: 1%
 }
 .button1 {
 background-color: #F3F3F3;
+display: block;
+color: #111111;
 border: none;
-padding: 16px 32px;
+padding: 0 32px;
 text-align: center;
 display: inline-block;
 font-size: 16px; 
 border-radius: 4px;
+cursor: pointer;
+box-shadow: 0 10px 20px  #111111;
 }
