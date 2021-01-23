@@ -119,18 +119,25 @@ body {
 
 .wrapper {
     margin: 106px auto;
-    width: 480px;
+    width: 960px;
 }
 
 h1 {color: #111111;
 font-size: 48px;
 font-family: 'JetBrains Mono', monospace;
 font-weight: medium;
+padding: 16px;
 }
 p {color: #111111;
 font-family: 'Space Grotesk', sans-serif;
 font-size: 24px;
 margin: 0;
+padding: 16px;
+}
+
+.inline-block{
+    display: inline-block;
+    vertical-align: top;
 }
 
 .intro {
@@ -138,20 +145,30 @@ margin: 0;
     margin-left: 0;
     margin-right: auto;
     text-align: 0;
+    position: relative;
+}
+.name {
+    display: flex;
+align-items: center;
 }
 
-.nav {
-    display: inline-block;
-    vertical-align: top;
-    font-size: 16px;
-    padding: 16px;
-  }
+.box {
+    background-color: #4AD5CA;
+    width: 36px;
+    height: 45px;
+    position: fixed;
+    margin-right: 0;
+    left: 275px;
+    z-index: -1;
+}
+
 .logo {
-position: relative;
-margin-left: 0;
-margin-right: auto;
-width: 230px;
-height: 230px;
+    position: relative;
+    margin-left: 0;
+    margin-right: auto;
+    text-align: center;
+    width: 23%;
+    padding: 1%;
 }
 .nav {
     width: 73%;
@@ -159,7 +176,8 @@ height: 230px;
 }
 
 ul{
-margin-left: 60px
+    width: 50%;
+    margin-left: auto;
 }
 
 ul li {
@@ -178,19 +196,17 @@ cursor: pointer;
 
 ul li a:hover {
     transform: uppercase;
-    }
-
-.logo {
-    text-align: center;
 }
+
 .heroImg {
     height: 600px;
     padding: 25px;
     
 }
 .content {
-    width 500px;
+    height 600px;
     margin: 0 auto;
+    padding: 25px;
 }
 .button1 {
 background-color: #F3F3F3;
