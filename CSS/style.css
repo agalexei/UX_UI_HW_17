@@ -1,5 +1,5 @@
 /* 
-This is to reset browser. please scroll to where I show my code
+This is to reset browser. please scroll to line 102 where I show my code
 */
 
 html, body, div, span, object, iframe,
@@ -104,16 +104,22 @@ input, select {
 
 
 * {
-    margin: 0;
+    margin: 25%;
+    margin-right:
     padding: 0;
     text-decoration: none;
 }
 
 body {
+    width: 100%;
+    height: 100%;
     background-color: #F3F3F3;
 }
 
 .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 25% 25% 25% 25%;
     margin: 106px auto;
     width: 960px;
 }
@@ -136,6 +142,45 @@ padding: 16px;
     vertical-align: top;
 }
 
+.header {
+  grid-column-end: span 5;
+  grid-row-start: 1;
+  grid-row-end: 2;  
+}
+
+.content {
+    grid-column-end: span 5;
+    grid-row-start: 2;
+    grid-row-end: 3;;
+}
+
+.case-study1 {
+    grid-column-start: 6;
+    grid-column-end: 13;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.case-study2 {
+    grid-column-start: 6;
+    grid-column-end: 13;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.case-study3 {
+    grid-column-start: 6;
+    grid-column-end: 13;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.inline-block {
+    grid-column-end: span 5;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
 .intro {
     display: block;
     margin-left: 0;
@@ -152,9 +197,9 @@ align-items: center;
     background-color: #4AD5CA;
     width: 36px;
     height: 45px;
-    position: fixed;
+    position: relative;
     margin-right: 0;
-    left: 275px;
+    left: -60px;
     z-index: -1;
 }
 
