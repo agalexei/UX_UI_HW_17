@@ -102,7 +102,6 @@ input, select {
 /* This is my text below */
 
 
-
 * {
     margin: 0;
     padding: 0;
@@ -117,12 +116,13 @@ body {
 
 .wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-columns: repeat (12, 1fr);
+    grid-template-rows: repeat (4,1fr);
+    grid-template-columns: minmax(0, 1fr) 300px;
     grid-row-gap: 16px;
     margin: 10% auto;
-    width: 960px;
-
+    width: 50%;
+    height: 80%;
 }
 
 h1 {color: #111111;
@@ -147,15 +147,6 @@ p {color: #111111;
     margin: 0;
     }
 
-h3 {color: #f3f3f3;
-    font-size: 128px;
-    font-family: 'JetBrains Mono', monospace;
-    font-weight: regular;
-    padding: 16px;
-    white-space: nowrap;
-    background-blend-mode: multiply;
-    }
-
 h4 {color: #f3f3f3;
     font-size: 36px;
     font-family: 'JetBrains Mono', monospace;
@@ -172,9 +163,22 @@ h5 {color: #f3f3f3;
     font-weight: 50;
     }
 
-.inline-block{
-    display: inline-block;
-    vertical-align: top;
+h6 {color: #111111;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 16px;
+    }
+
+.inline-block {
+    position: relative;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin: 16px;
+    text-align: left;
+    padding: 8px;
 }
 
 .logoname {
@@ -182,6 +186,7 @@ h5 {color: #f3f3f3;
   grid-column-end: 4;
   grid-row-start: 1;
   grid-row-end: 2;  
+  max-width: 100%;
 }
 
 .content {
@@ -190,15 +195,11 @@ h5 {color: #f3f3f3;
     grid-row-start: 2;
     grid-row-end: 3;
     white-space: nowrap;
-
+    text-align: left;
+    max-width: 100%;
 }
 
 .box2 {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 3;;
-    font-size: 24px;
     margin: 0px;
     background-color: #4AD5CA;
     width: 80px;
@@ -210,16 +211,36 @@ h5 {color: #f3f3f3;
     position: relative;
     white-space: nowrap;
 }
-
-
-.inline-block {
+.box3 {
     position: relative;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 4;
-    margin: 0;
-    text-align: left;
+    margin-top: 8px;
+    background-color: #4AD5CA;
+    width: 84px;
+    height: 8px;
+    bottom: 16px;
+    padding-right: 4px;
+    z-index: -2;
+    align-items: center;
+    position: relative;
+    white-space: nowrap;
+}
+.box4 {
+    position: relative;
+    margin-top: 8px;
+    background-color: #4AD5CA;
+    width: 48px;
+    height: 8px;
+    bottom: 16px;
+    padding-right: 4px;
+    z-index: -2;
+    align-items: center;
+    position: relative;
+    white-space: nowrap;
+}
+
+.casestudies {
+    grid-column-start: 3;
+    grid-column-end: 12;
 }
 
 .case-study1 {
@@ -234,7 +255,7 @@ h5 {color: #f3f3f3;
 
 .text-block1 {
     position: absolute;
-    bottom: 24px;
+    bottom: 20%;
     left: 24px;
     width: 504px;
     padding-top: 4px;
@@ -267,7 +288,7 @@ h5 {color: #f3f3f3;
 
 .text-block2 {
     position: absolute;
-    bottom: 24px;
+    bottom: 20%;
     left: 24px;
     width: 504px;
     padding-top: 4px;
@@ -300,7 +321,7 @@ h5 {color: #f3f3f3;
 
 .text-block3 {
     position: absolute;
-    bottom: 24px;
+    bottom: 20%;
     left: 24px;
     width: 504px;
     padding-top: 4px;
@@ -333,6 +354,10 @@ h5 {color: #f3f3f3;
     text-align: left;
 }
 
+.heroIMG {
+    width: 100%;
+}
+
 .intro {
     display: block;
     margin-left: 0;
@@ -348,21 +373,13 @@ align-items: center;
 .box {
     background-color: #4AD5CA;
     width: 36px;
-    height: 45px;
+    height: 48px;
     position: relative;
     margin-right: 0;
     left: -60px;
-    z-index: -1;
+    z-index: -2;
 }
 
-.logo {
-    position: relative;
-    margin-left: 0;
-    margin-right: auto;
-    text-align: center;
-    width: 23%;
-    padding: 1%;
-}
 .nav {
     width: 73%;
     padding: 1%;
@@ -404,23 +421,19 @@ text-align: left;
     grid-row-end: 4;
 }
 
-.content {
-    margin: 0 auto;
-    padding: 25px;
-}
 .button1 {
 background-color: #111111;
 display: inline-block;
 color: #f3f3f3;
 border: none;
-padding: 0;
-text-align: left;
-display: inline-block;
 font-size: 16px; 
 cursor: pointer;
 white-space: nowrap;
-margin-left: 16px;
-margin-top: 0px;
+margin-top: 8px;
+width: 56px;
+padding-left: 2px;
+padding-right: 2px;
+text-align: center;
 }
 
 .button2 {
@@ -430,7 +443,6 @@ margin-top: 0px;
     border: none;
     padding: 0;
     text-align: left;
-    display: inline-block;
     font-size: 16px; 
     cursor: pointer;
     white-space: nowrap;
@@ -445,7 +457,6 @@ ul li .button2 {
     border: none;
     padding: 0;
     text-align: left;
-    display: inline-block;
     font-size: 16px; 
     cursor: pointer;
     white-space: nowrap;
@@ -473,9 +484,225 @@ ul li .button2 {
         background-color: transparent;
         text-decoration: none;
       }
+      .burgermenu {
+          display: none;
+      }
 
-      /*         background-color: #4AD5CA;
-        width: 124px;
-        height: 10px;
-        bottom: 24px;
-        align-items: center; */
+      @media only screen and (max-width: 600px) {
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat (6, 1fr);
+            grid-template-rows: repeat (5, 1fr);
+            grid-template-columns: minmax(0, 1fr) 300px;
+            width: 80%;
+            }
+        
+        p {
+        color: #111111;
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 24px;
+        padding-top: 16px;
+        padding-right: 16px;
+        padding-bottom: 16px;
+        padding-left: 0;
+        margin: 0;
+            }
+        h6 {
+            color: #111111;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 24px;
+            padding-top: 16px;
+            padding-right: 16px;
+            padding-bottom: 16px;
+            padding-left: 0;
+            margin: 0;
+                }
+
+        .box2 {
+        width: 128px;
+        height: 8px;
+        bottom: 16;
+        }
+        .content {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            white-space: nowrap;
+            text-align: left;
+            font-size: 24px;
+        }
+
+       .inline-block {
+        display: inline-block;
+        font-size: 24px;
+        text-align: left;
+        margin-top: 16px;
+        padding-left: 0;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        left: -64px;
+        text-transform: uppercase;
+       } 
+
+       .button1 {
+        font-size: 24px;
+        background-color: #111111;
+        display: inline-block;
+        color: #f3f3f3;
+        border: none;
+        text-align: left;
+        cursor: pointer;
+        white-space: nowrap;
+        width: 88px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        padding-left: 2px;
+        padding-right: 2px;
+        text-align: center;
+       }
+       .button2 {
+        font-size: 24px;
+        text-align: left;
+        margin: 0;
+        background-color: #111111;
+        display: inline-block;
+        color: #f3f3f3;
+        border: none;
+        padding: 0;
+        text-align: left;
+        cursor: pointer;
+        white-space: nowrap;
+        margin-left: 0;
+        width: 104px;
+       }
+
+       .logoname {
+        grid-column-start: 1;
+        grid-column-end: 7;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        min-width: 50%;
+    }
+
+    .about-me {
+        grid-column-start: 1;
+        grid-column-end: 7;  
+        grid-row-start: 2;
+        min-width: 50%;
+        font-size: 24px;
+    }
+    .heroIMG {
+        padding-bottom: 10%;
+        grid-column-start: 2;
+        grid-column-end: 6;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        min-width: 50%;
+        }
+    .paragraph1 {
+        grid-column-start: 1;
+        grid-column-end: 7;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        font-size: 24px;
+    }
+    .paragraph2 {
+        grid-column-start: 1;
+        grid-column-end: 7;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        font-size: 24px;
+    }
+    .paragraph3 {
+        grid-column-start: 1;
+        grid-column-end: 7;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        font-size: 24px;
+    }
+    .paragraph4 {
+        grid-column-start: 1;
+        grid-column-end: 7;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        font-size: 24px;
+    }
+
+    /* .casestudies {
+        grid-column-start: 3;
+        grid-column-end: 7
+    } */
+
+    .case-study1 {
+        position: relative;
+        display: inline-block;
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        margin: 0;
+        font-size: 100%;
+        padding: 0;
+        min-width: 0;
+    }
+    
+    .text-block1 {
+        position:absolute;
+        display: inline-block;
+        bottom: 20%;
+        width: 504px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        background-color: rgba(65, 217, 177, 0.8);
+        padding-left: 0;
+        min-width: 0;
+    }
+    .case-study2 {
+        position: relative;
+        display: inline-block;
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        margin: 0;
+        padding: 0;
+        min-width: 0;
+    }
+    .text-block2 {
+        position: absolute;
+        display: inline-block;
+        bottom: 20%;
+        width: 504px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        background-color:rgba(255, 20, 147, 0.8);
+        padding-left: 0;
+    }
+    .case-study3 {
+        position: relative;
+        display: inline-block;
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        font-size: 100%;
+        margin: 0;
+        padding: 0;
+        min-width: 0;
+    }
+    .text-block3 {
+        position: absolute;
+        display: inline-block;
+        bottom: 20%;
+        left: 24px;
+        width: 504px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        background-color:rgba(205, 100, 237, 0.8);
+        padding-left: 0;
+        min-width: 0;
+    }
+    }
