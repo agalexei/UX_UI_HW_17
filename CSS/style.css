@@ -3,6 +3,17 @@
     padding: 0;
     text-decoration: none;
 }
+@media only screen and (min-width: 601px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat (12, 1fr );
+        grid-template-rows: repeat (1fr 1fr 1fr 1fr);
+        grid-row-gap: 16px;
+        width: 50%;
+        height: 80%;
+        margin-left: 25%;
+        text-decoration: none;
+    }
 
 body {
     width: 100%;
@@ -17,56 +28,48 @@ h1 {color: #111111;
     padding: 16px;
     white-space: nowrap;
     }
-    h2 {color: #111111;
+h2 {color: #111111;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 24px;
+    margin: 0;
+    padding: 16px;
+    white-space: nowrap;
+    }
+    
+    p {color: #111111;
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 16px;
+        margin: 0;
+        }
+    
+    h4 {color: #f3f3f3;
+        font-size: 36px;
+        font-family: 'JetBrains Mono', monospace;
+        font-weight: regular;
+        padding: 4px;
+        white-space: nowrap;
+        background-blend-mode: multiply;
+        }
+    
+    h5 {color: #f3f3f3;
         font-family: 'Space Grotesk', sans-serif;
         font-size: 24px;
+        padding: 4px;
+        font-weight: 50;
+        }
+    
+    h6 {color: #111111;
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 16px;
         margin: 0;
         padding: 16px;
-        white-space: nowrap;
         }
-        
-        p {color: #111111;
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 16px;
-            margin: 0;
-            }
-        
-        h4 {color: #f3f3f3;
-            font-size: 36px;
-            font-family: 'JetBrains Mono', monospace;
-            font-weight: regular;
-            padding: 4px;
-            white-space: nowrap;
-            background-blend-mode: multiply;
-            }
-        
-        h5 {color: #f3f3f3;
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 24px;
-            padding: 4px;
-            font-weight: 50;
-            }
-        
-        h6 {color: #111111;
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 16px;
-            margin: 0;
-            padding: 16px;
-            }
-.wrapper {
-    display: grid;
-    grid-template-columns: repeat (12, 1fr);
-    grid-template-rows: repeat (4,1fr);
-    grid-row-gap: 16px;
-    width: 50%;
-    height: 80%;
-    margin-left: 25%;
-}
+
 .inline-block {
     position: relative;
-    margin: 16px;
     text-align: left;
     padding: 8px;
+    left: -136px;
 }
 .header {
     grid-column-start: 1;
@@ -87,8 +90,7 @@ h1 {color: #111111;
     width: 36px;
     height: 48px;
     position: relative;
-    top: -72px;
-    right: -208px;
+    left: -56px;
     z-index: -2;
 }
 .box2 {
@@ -189,11 +191,6 @@ h1 {color: #111111;
     background-color:rgba(205, 100, 237, 0.8);
     padding-left: 0;
 }
-.nav {
-    width: 73%;
-    padding: 1%;
-    margin-left: 0;
-}
 
 ul{
     width: 50%;
@@ -225,9 +222,9 @@ cursor: pointer;
 white-space: nowrap;
 margin-top: 8px;
 width: 56px;
-padding-left: 2px;
-padding-right: 2px;
-text-align: center;
+padding-left: 4px;
+padding-right: 4px;
+text-align: left;
 }
 
 .button2 {
@@ -325,17 +322,54 @@ align-items: center;
     grid-row-start: 1;
     grid-row-end: 4;
 }
-
+}
 
 
   @media only screen and (max-width: 600px) {
     .wrapper {
+        margin-left: 10%;
         display: grid;
-        grid-template-columns: repeat (6, 1fr);
         grid-template-rows: repeat (4, 1fr);
+        grid-template-columns: repeat (5, 1fr);
         width: 80%;
         height: 90%;
         }
+
+        body {
+            width: 100%;
+            height: 100%;
+            background-color: #F3F3F3;
+        }
+        h1 {color: #111111;
+            font-size: 48px;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: medium;
+            padding: 16px;
+            white-space: nowrap;
+            }
+        h2 {color: #111111;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 24px;
+            margin: 0;
+            padding: 16px;
+            white-space: nowrap;
+            }
+            
+            h4 {color: #f3f3f3;
+                font-size: 36px;
+                font-family: 'JetBrains Mono', monospace;
+                font-weight: regular;
+                padding: 4px;
+                white-space: nowrap;
+                background-blend-mode: multiply;
+                }
+            
+            h5 {color: #f3f3f3;
+                font-family: 'Space Grotesk', sans-serif;
+                font-size: 24px;
+                padding: 4px;
+                font-weight: 50;
+                }
         p {
             color: #111111;
             font-family: 'Space Grotesk', sans-serif;
@@ -356,11 +390,45 @@ align-items: center;
                 padding-left: 0;
                 margin: 0;
                     }
-    
+                .box {
+                    background-color: #4AD5CA;
+                    width: 36px;
+                    height: 48px;
+                    position: relative;
+                    left: 208px;
+                    bottom: 72px;
+                    z-index: -2;
+                }
             .box2 {
             width: 128px;
             height: 8px;
             bottom: 16;
+            }
+            .box3 {
+                position: relative;
+                margin-top: 8px;
+                background-color: #4AD5CA;
+                width: 128px;
+                height: 8px;
+                bottom: 20px;
+                padding-right: 4px;
+                z-index: -2;
+                align-items: center;
+                position: relative;
+                white-space: nowrap;
+            }
+            .box4 {
+                position: relative;
+                margin-top: 8px;
+                background-color: #4AD5CA;
+                width: 72px;
+                height: 8px;
+                bottom: 20px;
+                padding-right: 4px;
+                z-index: -2;
+                align-items: center;
+                position: relative;
+                white-space: nowrap;
             }
             .content {
                 grid-column-start: 1;
@@ -369,19 +437,20 @@ align-items: center;
                 text-align: left;
                 font-size: 24px;
             }
-    
            .inline-block {
-            display: inline-block;
+            color: #111111;
+            font-family: 'Space Grotesk', sans-serif;
+            padding-top: 16px;
+            padding-right: 16px;
+            padding-bottom: 16px;
+            display: fixed;
             font-size: 24px;
             text-align: left;
-            margin-top: 16px;
             padding-left: 0;
             grid-column-start: 2;
             grid-column: span 1;
             grid-row-start: 2;
             grid-row: span 1;
-            left: -64px;
-            text-transform: uppercase;
            } 
     
            .button1 {
@@ -421,60 +490,63 @@ align-items: center;
             grid-row-start: 1;
             grid-row-end: 2;
             min-width: 50%;
-            margin: 50%;
             max-width: 50%;
         }
         .casestudies {
             grid-column-start: 1;
             grid-column: span 6;
-            grid-row-start: 2;
+            grid-row-start: 3;
+            grid-row: span 3;
         }
         .case-study1 {
             position: relative;
             display: inline-block;
-            grid-row-start: 2;
-            grid-row: span 1;
+            grid-row-start: 3;
             margin: 0;
             font-size: 100%;
             padding: 0;
             padding-bottom: 16px;
             min-width: 0;
-            max-width: 100%;
+            width: 100%;
+            overflow: hidden;
         }
-        
         .text-block1 {
             position:absolute;
             display: inline-block;
             bottom: 20%;
+            left: 24px;
             width: 504px;
             padding-top: 4px;
             padding-bottom: 4px;
             background-color: rgba(65, 217, 177, 0.8);
             padding-left: 0;
             min-width: 0;
+            overflow: hidden;
         }
         .case-study2 {
             position: relative;
             display: inline-block;
             grid-column-start: 1;
             grid-column-end: 6;
-            grid-row-start: 3;
-            grid-row: span 1;
+            grid-row-start: 4;
             margin: 0;
             padding: 0;
             padding-bottom: 16px;
             min-width: 0;
-            max-width: 100%;
+            width: 100%;
+            overflow: hidden;
         }
         .text-block2 {
             position: absolute;
             display: inline-block;
             bottom: 20%;
+            left: 24px;
             width: 504px;
             padding-top: 4px;
             padding-bottom: 4px;
             background-color:rgba(255, 20, 147, 0.8);
             padding-left: 0;
+            overflow: hidden;
         }
         .case-study3 {
             position: relative;
@@ -482,13 +554,13 @@ align-items: center;
             grid-column-start: 1;
             grid-column-end: 6;
             grid-row-start: 5;
-            grid-row: span 1;
             font-size: 100%;
             margin: 0;
             padding: 0;
             padding-bottom: 16px;
             min-width: 0;
-            max-width: 100%;
+            width: 100%;
+            overflow: hidden;
         }
         .text-block3 {
             position: absolute;
@@ -501,6 +573,7 @@ align-items: center;
             background-color:rgba(205, 100, 237, 0.8);
             padding-left: 0;
             min-width: 0;
+            overflow: hidden;
         }
         .about-me {
             grid-column-start: 1;
@@ -545,4 +618,45 @@ align-items: center;
             grid-row-end: 4;
             font-size: 24px;
         } 
+        a:link {
+            color:#111111;
+            background-color: transparent;
+            text-decoration: none;
+          }
+          a:visited {
+            color:#111111;
+            background-color: transparent;
+            text-decoration: none;
+          }
+          a:hover {
+            color: #111111;
+            text-decoration: none;
+            background-color: transparent;
+          }
+        
+          a:active {
+            color: #111111;
+            background-color: transparent;
+            text-decoration: none;
+          }
+          ul{
+            width: 50%;
+            margin-left: auto;
+        }
+        
+        ul li {
+            list-style: none;
+            width: 50%;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        ul li a {
+        display: block;
+        text-decoration: none;
+        font-size: 24px;
+        color: #111111;
+        padding: 0 32px;
+        cursor: pointer;
+        margin-left: 0;
+        text-align: left;
+        }
     }
